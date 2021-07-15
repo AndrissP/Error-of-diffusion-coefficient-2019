@@ -5,9 +5,9 @@ The calculation can be perfomed of an example experimental data file provided in
 ## Prerequsites
 ### For performing OLSF on a data file with coordinates
 * R version>2.0
-* Packages MotilityLab, pbapply and icesTAF installed.
+* Packages MotilityLab, pbapply and icesTAF installed. If working in RStudio, also "rstudioapi".
 * Possible to install either in your editor (e.g. in RStudio in *"Tools"*, *"Install Packages"*) or by running ir R
-install.packages("ellipse", "pbapply", "icesTAF")
+install.packages("ellipse", "pbapply", "icesTAF", "rstudioapi")
 install.packages("MotilityLab", repos="http://R-Forge.R-project.org")
 
 ### For extracting coordinates from an optical microscope movie
