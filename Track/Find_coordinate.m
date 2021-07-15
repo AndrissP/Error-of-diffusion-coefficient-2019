@@ -1,5 +1,5 @@
 function [ Mx, My, Radii ] = Find_coordinate ( image )
-% To use with Find_coord. Finds the coordinate of the center of the circle.
+% To use with Find_coord.m Finds the coordinate of the center of the circle.
 % By Artis Brasovs
 
 [~,~, numberOfColorChannels] = size(image);

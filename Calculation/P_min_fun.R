@@ -1,11 +1,9 @@
-###Use together with MainSolve1D.R
-#####Calculates Pmin using the Analytical function###########
+### Used together with MainSolve.R
+##### Calculates Pmin using the Analytic function ###########
 Nt=length(traj_x)
-Nt=100
 
 P_min_fun=function(Nr_outp=2){ #Nr_outp=2 if Ndim=1.
   x=ifelse(is.na(x),0,x)
-  x2=ifelse(is.na(x2),0,x2)
   
   if (x < 0){
     P_min=2
@@ -18,6 +16,7 @@ P_min_fun=function(Nr_outp=2){ #Nr_outp=2 if Ndim=1.
   #cat("\n P_min = ",P_min)
   
   if (Nr_outp==2){
+    x2=ifelse(is.na(x2),0,x2)
     if (x2<0){
       P_min2=2
     } else if (sqrt((2 + 4*x2 + 3*x2^2)/Nt) > sqrt((9. + 10.*x2 + 5.75*x2^2)/Nt)+x2) {

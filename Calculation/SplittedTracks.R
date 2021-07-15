@@ -1,7 +1,6 @@
 ########Check changes during the random walk, divide trajectory into intervals#############
 #Not complete
 
-
 library(MotilityLab)
 Data="4-3-2"
 Dati<-read.csv(sprintf("~/Brauns/Eksperiments/4/Data_%s.dat",Data),head=FALSE)

@@ -1,7 +1,9 @@
 function [ Mx,My, Radii] = Find_coord(n_begin,n_end)
 %Uses function Find_coordinate. The input n_begin and
-%n_end means the frame number from which to begin tracking and the frame number until which to track. 
-%Makes a loop over all frames. When you run a function it will show the first frame. You should
+%n_end means the frame number from which to begin tracking and the frame number until which to track.
+%Before run change the file name in *image =
+%imread(['..\Track\','6','.tif'],n_frame);* line to the file name containing the movie.
+%Function makes a loop over all frames. When you run a function it will show the first frame. You should
 %click at the center of the bead and somewhere on the outer side of it's border, then press enter. The function crops the
 %frame series around the bead, so that the tracking would not jump to
 %another bead near by. The cropping works as changing the color of
