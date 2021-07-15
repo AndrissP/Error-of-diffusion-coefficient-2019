@@ -1,17 +1,22 @@
 ## Overview
 The project consists of two folders. *Calculation* folder contains a script in R language which calculates the diffusion coefficient using the OLSF from a given trajectory.
-The calculation can be perfomed of an examples of experimental results provided in folder *Track*. 
+The calculation can be perfomed of an example experimental data file provided in folder *Track*. 
 
 ## Prerequsites
 ### For performing OLSF on a data file with coordinates
 * R version>2.0
-* Packages MotilityLab, pbapply and icesTAF installed. Possible to install either through *"Tools"* in .. or by typing in console *"install.packages(XLConnect, MotilityLab,icesTAF)"*
+* Packages MotilityLab, pbapply and icesTAF installed.
+* Possible to install either in your editor (e.g. in RStudio in *"Tools"*, *"Install Packages"*) or by running ir R
+install.packages("ellipse", "pbapply", "icesTAF")
+install.packages("MotilityLab", repos="http://R-Forge.R-project.org")
+
 ### For extracting coordinates from an optical microscope movie
-* Matlab
+* Matlab version>
+
+## Content
 
 *Calculation* folder contains a script in R language calculating the diffusion coefficient using the OLSF from a given trajectory. *MainSolve1D.R* is the master script runing *MSD_per_time.R* and *P_min_fun.R* as shell functions. To run the function, open the *MainSolve1D.R* in R and read the first lines with the explanation.
 
-## Content
 *Track* directory contains an example data file *Data_6.dat* containing the result of a tracking experiment of bead in a liquid. It contains (x, y, R) values for each measurement, where (x,y) are the x and y coordinates of the bead in pixels, and R is the detected radius of the bead. 
 
 *Track* folder also contains the original movie of the experiment obtained by the optical microscope, *6.tif*, providing the data mentioned above. In addition, it contains a matlab function *Find_coord.m* used to extract the trajectories of a bead from the film. *Find_coord.m* repeatedly runs *Find_coordinate.m* function that finds the position of the centre of one bead in only one frame. The output of *Find_coord.m* gives as output (x, y, R) as explained above.
