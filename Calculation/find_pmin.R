@@ -1,4 +1,4 @@
-###Use together with MainSolve.R or SplitterTracks.R
+###Use together with OLSF_on_data.R or SplitterTracks.R
 #' From the data frame in input containing (x,y,time) calculates MSD of the
 #' trajectory, then it searches for the optimal number of points for the fit
 #' taking the starting values Pinit
@@ -59,7 +59,7 @@ find_pmin<-function(input_traj, Pinit=c(10,10), nAxes=2){
   
   if (nAxes==1){
     tra<-tracks(data.frame(time, traj_x))
-    cat(line_break_print,"x axis:.", " Initial P = ", Pinit[1], "\n",line_break_print)
+    cat(line_break_print,"x axis.", " Initial P = ", Pinit[1], "\n",line_break_print)
     fitRes1<-iterate_pmin(tra, Pinit[1], time2, nAxes)
     tra<-tracks(data.frame(time, traj_y))
     cat(line_break_print, "Axis 2.", " Initial P = ", Pinit[2], "\n",line_break_print)
