@@ -1,6 +1,6 @@
 ## Overview
 The project consists of two folders. *Calculation* folder contains a script in R language which calculates the diffusion coefficient using the OLSF from a given trajectory.
-The calculation can be perfomed of an example experimental data file provided in folder *Track*. 
+The calculation can be perfomed on an example of the experimental data file provided in folder *Track*. 
 
 ## Prerequsites
 ### For performing OLSF on a data file with coordinates
