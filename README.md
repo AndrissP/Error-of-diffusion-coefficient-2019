@@ -24,7 +24,8 @@ To program can be run either by
 Rscript OLSF_on_data.R
 ```
 or
-``` R
+```
+R
 source("OLSF_on_data.R")
 ```
 or you favourite R editor, like RStudio. Note that the first two methods can be run within anywhere of the git folder by pointing the right address of the file, but won't work from outside it. Edit the first lines *OLSF_on_data.R* to change the analyzed files and the parameters of the experiment. Code to change the 
