@@ -5,17 +5,25 @@ The calculation can be perfomed on an example of the experimental data file prov
 ## Prerequsites
 ### For performing OLSF on a data file with coordinates
 * R version>2.0
-* Packages MotilityLab, pbapply and icesTAF installed. If working in RStudio, also "rstudioapi".
-* Possible to install either in your editor (e.g. in RStudio in *"Tools"*, *"Install Packages"*) or by running ir R
-install.packages("ellipse", "pbapply", "icesTAF", "rstudioapi")
-install.packages("MotilityLab", repos="http://R-Forge.R-project.org")
+* Packages *MotilityLab*, *pbapply*, *icesTAF* and *here* installed.
+* Possible to install either in your editor (e.g. in RStudio in *"Tools"*, *"Install Packages"*) or by running in R
+```install.packages("ellipse", "pbapply", "icesTAF", "here")
+install.packages("MotilityLab", repos="http://R-Forge.R-project.org")```
 
 ### For extracting coordinates from an optical microscope movie
 * Matlab version>
 
 ## Content
 
-*Calculation* folder contains a script in R language calculating the diffusion coefficient using the OLSF from a given trajectory. *MainSolve1D.R* is the master script runing *MSD_per_time.R* and *P_min_fun.R* as shell functions. To run the function, open the *MainSolve1D.R* in R and read the first lines with the explanation.
+*Calculation* folder contains a script in R language calculating the diffusion coefficient using the OLSF from a given trajectory.
+To program can be run either by
+```Rscript OLSF_on_data.R ```
+or
+```R
+source("OLSF_on_data.R")
+```
+or you favourite R editor, like RStudio. Note that the first two methods can be run within anywhere of the git folder by pointing the right address of the file, but won't work from outside it. Edit the first lines *OLSF_on_data.R* to change the analyzed files and the parameters of the experiment. Code to change the 
+A function *p_min_fun* determining the optimal number of points for the OLSF is in *p_min_fun.R*.
 
 *Track* directory contains an example data file *Data_6.dat* containing the result of a tracking experiment of bead in a liquid. It contains (x, y, R) values for each measurement, where (x,y) are the x and y coordinates of the bead in pixels, and R is the detected radius of the bead. 
 
