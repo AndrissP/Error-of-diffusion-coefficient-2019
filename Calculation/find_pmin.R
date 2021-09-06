@@ -54,7 +54,7 @@ find_pmin<-function(input_traj, Pinit=c(10,10), nAxes=2){
   traj_y=input_traj[,2]
   time=input_traj[,3]
   time2=tail(time,length(time)-1) #time for the plot
-  line_break_print = c(paste(rep("=",80), collapse = ""), "\n")
+  line_break_print = c(paste(rep("=",79), collapse = ""), "\n")
   
   
   if (nAxes==1){
