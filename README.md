@@ -9,7 +9,7 @@ The calculation can be perfomed on an example of the experimental data file prov
 * Possible to install either in your editor (e.g. in RStudio in *"Tools"*, *"Install Packages"*) or by running in R
 ```
 R
-install.packages("ellipse", "pbapply", "icesTAF", "here")
+install.packages(c("ellipse", "pbapply", "icesTAF", "here"))
 install.packages("MotilityLab", repos="http://R-Forge.R-project.org")
 ```
 
